@@ -6,14 +6,6 @@ df$Income_Category <- cut(df$Income, breaks = income_bins,
                                      "$100,000 to $149,999", "$150,000 to $200,000", "upper_outlier"),
                           right = FALSE)
 
-head(df$Income_Category)
-
-outliers_below_min <- sum(df$Income_Category == "lower_outlier")  
-outliers_above_max <- sum(df$Income_Category == "upper_outlier") 
-
-cat("outliers below minimum:", outliers_below_min, "\n")
-cat("outliers above maximum:", outliers_above_max, "\n")
-
 plot1 <- ggplot(df, aes(x = Income_Category, y = log10(Income), fill = Income_Category)) + 
   geom_boxplot() + 
   labs(title = "Log Distribution: Income x Income_Category", 
