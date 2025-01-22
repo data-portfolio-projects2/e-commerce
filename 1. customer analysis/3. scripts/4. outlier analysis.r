@@ -1,4 +1,4 @@
-income_bins <- c(-Inf, 15000, 24999, 34999, 49999, 74999, 99999, 149999, 199999, Inf)
+income_bins <- c(-Inf, 15000, 24999, 34999, 49999, 74999, 99999, 149999, 200000, Inf)
 
 df$Income_Category <- cut(df$Income, breaks = income_bins, 
                           labels = c("lower_outlier", "$15,000 to $24,999", "$25,000 to $34,999", 
