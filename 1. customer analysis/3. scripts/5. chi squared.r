@@ -20,10 +20,10 @@ chi_squared_goodness_of_fit <- function(income_category) {
   }
 }
 
-chi_square_results <- chisq.test(table(df$Income_Category, df$Age_Segment))
-print(chi_square_results)  
-
 unique_categories <- unique(df$Income_Category)
 for (category in unique_categories) {
   chi_squared_goodness_of_fit(category)
 }
+
+chi_square_results <- chisq.test(table(df$Income_Category, df$Age_Segment))
+print(chi_square_results)  
