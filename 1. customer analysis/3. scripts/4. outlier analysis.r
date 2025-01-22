@@ -8,3 +8,6 @@ df$Income_Category <- cut(df$Income,
                           breaks = income_bins, 
                           labels = income_labels, 
                           right = FALSE)
+
+df$Outlier <- ifelse(df$Income < min(income_bins) | df$Income > max(income_bins), TRUE, FALSE)
+
