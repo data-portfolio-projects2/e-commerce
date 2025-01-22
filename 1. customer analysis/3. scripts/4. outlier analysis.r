@@ -22,4 +22,3 @@ plot <- ggplot(df, aes(x = Income_Category, y = log10(Income), fill = Income_Cat
   theme_minimal() +
   scale_fill_brewer(palette = "Set2")
 
-print(plot)
