@@ -13,6 +13,3 @@ df$Age_Segment <- cut(df$Age,
                                  "Pre-Retirement"),
                       right = TRUE)
 
-table(df$Income_Level)
-table(df$Age_Segment)
-head(df)
