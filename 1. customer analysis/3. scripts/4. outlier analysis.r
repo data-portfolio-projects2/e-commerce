@@ -14,11 +14,20 @@ outliers_above_max <- sum(df$Income_Category == "upper_outlier")
 cat("outliers below minimum:", outliers_below_min, "\n")
 cat("outliers above maximum:", outliers_above_max, "\n")
 
-plot <- ggplot(df, aes(x = Income_Category, y = log10(Income), fill = Income_Category)) + 
+plot1 <- ggplot(df, aes(x = Income_Category, y = log10(Income), fill = Income_Category)) + 
   geom_boxplot() + 
   labs(title = "Log Distribution: Income x Income_Category", 
        x = "Income Category", 
        y = "Log10(Income)") +
   theme_minimal() +
   scale_fill_brewer(palette = "Set2")
+
+plot2 <- ggplot(df, aes(x = Income_Category, y = log10(Income), fill = Income_Category)) + 
+  geom_bar(stat = "identity") + 
+  labs(title = "Log Distribution: Income x Income_Category", 
+       x = "Income Category", 
+       y = "Log10(Income)") +
+  theme_minimal() +
+  scale_fill_brewer(palette = "Set2")
+
 
