@@ -14,5 +14,5 @@ df$Outlier <- ifelse(df$Income < min(income_bins) | df$Income > max(income_bins)
 outliers_below_min <- sum(df$Income < min(income_bins)) 
 outliers_above_max <- sum(df$Income > max(income_bins))
 
-cat("Number of outliers below minimum:", outliers_below_min, "\n")
-cat("Number of outliers above maximum:", outliers_above_max, "\n")
+cat("outliers below minimum:", outliers_below_min, "\n")
+cat("outliers above maximum:", outliers_above_max, "\n")
