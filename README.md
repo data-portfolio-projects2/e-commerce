@@ -1,0 +1,1 @@
+This project applies statistical and machine learning methods to analyze real-world data, compare various techniques, and deliver clear insights. It aims to identify effective approaches for data analysis, helping clients make informed, data-driven decisions with practical and understandable results.
