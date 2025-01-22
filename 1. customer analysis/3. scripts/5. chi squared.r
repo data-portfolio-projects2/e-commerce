@@ -26,4 +26,3 @@ for (category in unique_categories) {
 }
 
 chi_square_results <- chisq.test(table(df$Income_Category, df$Age_Segment))
-print(chi_square_results)  
