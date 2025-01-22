@@ -46,3 +46,23 @@ plot6 <- ggplot(gender_df, aes(x = Gender, y = Count, fill = Gender)) +
   labs(title = "Gender Distribution", x = "Gender", y = "Count") +
   theme(legend.position = "none") +
   coord_flip() 
+
+plot7 <- ggplot(df, aes(x = Income_Level, y = log10(Income), fill = Age_Segment)) +
+  geom_boxplot() + 
+  labs(title = "log distribution: Income x Income_Level x Age_Segment", 
+       x = "Income_Level", 
+       y = "Log10(Income)") +
+  theme_minimal() +
+  scale_fill_brewer(palette = "Set2")
+
+plot8 <- ggplot(df, aes(x = Age_Segment, y = log10(Income), fill = Income_Level)) +
+  geom_boxplot() + 
+  labs(title = "log distribution: Income x Age_Segment x Income_Level", 
+       x = "Age_Segment", 
+       y = "Log10(Income)") +
+  theme_minimal() +
+  scale_fill_brewer(palette = "Set2")
+
+
+
+
