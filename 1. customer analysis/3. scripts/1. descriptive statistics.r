@@ -1,6 +1,5 @@
 summary(df)
 
-# Summary of Categorical Variables
 location_summary <- table(df$Location)
 gender_summary <- table(df$Gender)
 
