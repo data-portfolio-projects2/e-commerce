@@ -21,3 +21,14 @@ plot2 <- ggplot(df, aes(x = Income_Category, y = log10(Income), fill = Income_Ca
        y = "Log10(Income)") +
   theme_minimal() +
   scale_fill_brewer(palette = "Set2")
+
+plot3 <- ggplot(df_sum, aes(x = Income_Category, y = log10(Total_Income), fill = Income_Category)) + 
+  geom_bar(stat = "identity") + 
+  labs(title = "Log Distribution: Total Income by Income Category", 
+       x = "Income Category", 
+       y = "Log10(Total Income)") +
+  theme_minimal() +
+  scale_fill_brewer(palette = "Set2") + 
+  scale_x_discrete(labels = labels)  
+
+print(plot2)
