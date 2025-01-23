@@ -30,3 +30,19 @@ plot3 <- ggplot(df_sum, aes(x = Income_Category, y = log10(Total_Income), fill =
   theme_minimal() +
   scale_fill_brewer(palette = "Set2") + 
   scale_x_discrete(labels = labels)  
+
+calculate_IQR <- function(data, group_vars, value_var) {
+  data %>%
+    group_by(across(all_of(group_vars))) %>%
+    summarise(
+      Q1 = quantile(!!sym(value_var), 0.25, na.rm = TRUE),
+      Q3 = quantile(!!sym(value_var), 0.75, na.rm = TRUE),
+      IQR = Q3 - Q1,
+      Lower_Whisker = max(min(!!sym(value_var)), Q1 - 1.5 * IQR),
+      Upper_Whisker = min(max(!!sym(value_var)), Q3 + 1.5 * IQR),
+      .groups = "drop"
+    )
+}
+
+income_IQR <- calculate_IQR(df, "Income_Category", "Income")
+
