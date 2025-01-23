@@ -30,5 +30,3 @@ plot3 <- ggplot(df_sum, aes(x = Income_Category, y = log10(Total_Income), fill =
   theme_minimal() +
   scale_fill_brewer(palette = "Set2") + 
   scale_x_discrete(labels = labels)  
-
-print(plot2)
