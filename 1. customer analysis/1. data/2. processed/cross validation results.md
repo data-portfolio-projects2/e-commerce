@@ -46,3 +46,6 @@
 [1] "Accuracy for fold 5 : 1"
 ```
 ```
+> print(mean_accuracy)
+[1] 1
+```
