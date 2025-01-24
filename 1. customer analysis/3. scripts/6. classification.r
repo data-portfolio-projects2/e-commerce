@@ -300,5 +300,16 @@ orchestrator_knn_analysis <- function(df, target_variable, train_size = 0.8, k =
   return(list(accuracy = accuracy, f1_scores = f1_scores, roc_auc = roc_auc))
 }
 
-
+plot2 <- ggplot(df_count, aes(x = Income_Category, y = Count, fill = Count_Label)) + 
+  geom_bar(stat = "identity") + 
+  labs(
+    title = "Count Distribution by Income Category", 
+    x = "Income Category", 
+    y = "Count",
+    fill = "Legend"  
+  ) +  
+  theme_minimal() +
+  scale_fill_brewer(palette = "Set2") + 
+  scale_x_discrete(labels = labels) +   
+  coord_flip()  
 
