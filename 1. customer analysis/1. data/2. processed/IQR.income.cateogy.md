@@ -1,6 +1,6 @@
 ```
   Income_Category           Q1     Q3    IQR Lower_Whisker Upper_Whisker
-  <fct>                  <dbl>  <dbl>  <dbl>         <dbl>         <dbl>
+  
 1 $25,000 to $34,999    31686  3.39e4 2.26e3        31044         34972 
 2 $35,000 to $49,999    38715  4.61e4 7.38e3        35071         49949 
 3 $50,000 to $74,999    67063  7.24e4 5.33e3        59064.        74998 
