@@ -3,13 +3,9 @@ set.seed(123)
 plot_scatter_clusters <- function(distance_method, scaled_data, k, subset_size = 500) {
 
   dist_matrix <- dist(scaled_data, method = distance_method)
-  
   hc <- hclust(dist_matrix, method = "ward.D2")
-  
   clusters <- cutree(hc, k = k)
-  
   cluster_data <- data.frame(Income = income_subset$Income, Cluster = factor(clusters))
-  
   sampled_data <- cluster_data %>%
     sample_n(subset_size)  
   
