@@ -22,7 +22,6 @@ plot_scatter_clusters <- function(distance_method, scaled_data, k, subset_size =
 
 plot_euclidean <- plot_scatter_clusters("euclidean", scaled_income, k = 4, subset_size = 100)
 plot_manhattan <- plot_scatter_clusters("manhattan", scaled_income, k = 4, subset_size = 100)
-
 grid.arrange(plot_euclidean, plot_manhattan, ncol = 2)
 
 set.seed(123)  
