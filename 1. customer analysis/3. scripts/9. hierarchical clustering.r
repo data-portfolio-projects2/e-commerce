@@ -22,3 +22,17 @@ ggplot(income_subset, aes(x = Income, fill = as.factor(Cluster))) +
   ) +
   scale_fill_viridis_d() +  
   theme_minimal()
+
+geom_histogram(binwidth = 1000, alpha = 0.7, position = "dodge")
+
+ggplot(income_subset, aes(x = Income, fill = as.factor(Cluster))) +
+  geom_histogram(binwidth = 5000, alpha = 0.5, position = "identity") +
+  labs(
+    title = "Overlapping Income Distribution by Cluster",
+    x = "Income",
+    y = "Count",
+    fill = "Cluster"
+  ) +
+  scale_fill_viridis_d() +
+  theme_minimal()
+
