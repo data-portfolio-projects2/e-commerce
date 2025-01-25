@@ -56,3 +56,17 @@ cat("Cluster Stability (Mean Bootstrapped Value):", cluster_stability$bootmean, 
 
 heatmap(as.matrix(scaled_income), Rowv = as.dendrogram(hclust_euclidean),
         col = viridis(100), scale = "row", main = "Cluster Heatmap (Euclidean)")
+
+clustering_df <- data.frame(
+  Cluster = factor(c(clusters_euclidean, clusters_manhattan, clusters_cosine)),
+  Method = factor(rep(c("Euclidean", "Manhattan", "Cosine"), each = length(clusters_euclidean))),
+  stringsAsFactors = TRUE
+)
+
+ggplot(clustering_df, aes(x = Cluster, fill = Method)) +
+  geom_bar(position = "dodge", stat = "count", width = 0.7) +
+  labs(title = "Cluster Distribution across Different Distance Measures",
+       x = "Cluster", y = "Frequency") +
+  scale_fill_viridis_d(name = "Distance Measure") +
+  theme_minimal() +
+  theme(legend.position = "top")
