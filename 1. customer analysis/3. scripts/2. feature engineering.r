@@ -1,10 +1,8 @@
-# Create a new Income_Level variable based on Income distribution
 df$Income_Level <- cut(df$Income,
                        breaks = c(-Inf, 68446, 350668, Inf),
                        labels = c("Low", "Medium", "High"),
                        right = FALSE)
 
-# Create a new Age_Segment variable with updated labels
 df$Age_Segment <- cut(df$Age,
                       breaks = c(-Inf, 30, 43, 56, Inf),
                       labels = c("Emerging Adults", 
