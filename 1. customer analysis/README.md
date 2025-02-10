@@ -1,1 +1,3 @@
 Welcome to the Customer Analysis project, part of the broader e-commerce data infrastructure initiative. This project focuses on understanding your customer base by analyzing key demographic factors such as age, location, gender, and income level. We'll provide insights through descriptive statistics, identify customer segments using cluster analysis, and uncover relationships between demographic variables through chi-square tests. The goal is to equip you with valuable insights that can inform targeted marketing strategies and help optimize business decisions.
+
+![image](https://github.com/user-attachments/assets/f8b60a10-580d-4bdd-9457-a9e441c737a2)
